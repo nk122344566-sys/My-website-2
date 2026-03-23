@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Sweet 16, Comfort Eunice Neizer ❤️</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { 
+      background: linear-gradient(135deg, #1e3a8a, #60a5fa); 
+      font-family: system-ui, sans-serif;
+    }
+    .heart { animation: float 3s infinite; cursor: pointer; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+    .royal-blue { color: #4169E1; }
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 50; }
+  </style>
+</head>
+<body class="min-h-screen text-white overflow-x-hidden">
+
+  <!-- Music Player -->
+  <div class="fixed top-4 right-4 z-50 bg-black/50 px-4 py-2 rounded-full flex items-center gap-3">
+    <button onclick="toggleMusic()" class="text-3xl">🎵</button>
+    <span id="musicStatus" class="text-sm">Playing soft music for you...</span>
+  </div>
+  <audio id="bgMusic" loop>
+    <source src="C:\Users\nk135\Desktop\website\Summer-Walker-Girls-Need-Love.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Hero -->
+  <div class="h-screen flex items-center justify-center relative overflow-hidden">
+    <div class="text-center z-10">
+      <div class="inline-block bg-white/20 backdrop-blur px-6 py-2 rounded-full mb-6 text-xl">🎂 SWEET 16 SPECIAL 🎂</div>
+      <h1 class="text-6xl md:text-8xl font-bold mb-4">Happy Sweet 16</h1>
+      <h2 class="text-5xl md:text-7xl font-bold royal-blue">Comfort Eunice Neizer ❤️</h2>
+      <p class="mt-8 text-3xl">From NK — the guy who loves you most hehe</p>
+    </div>
+    
+    <!-- Clickable hearts -->
+    <div onclick="explodeHeart(this)" class="absolute top-10 left-10 text-7xl heart">💕</div>
+    <div onclick="explodeHeart(this)" class="absolute top-32 right-20 text-6xl heart" style="animation-delay:1s">❤️</div>
+    <div onclick="explodeHeart(this)" class="absolute bottom-20 left-1/3 text-8xl heart" style="animation-delay:2s">💖</div>
+    <div onclick="explodeHeart(this)" class="absolute bottom-32 right-1/4 text-7xl heart" style="animation-delay:0.5s">💗</div>
+  </div>
+
+  <!-- Sweet 16 Celebration -->
+  <div class="py-12 bg-black/30 text-center">
+    <p class="text-4xl font-bold royal-blue">You turned 16 on 26th February 2026 🎉</p>
+    <p class="text-2xl mt-4">Happy Sweet Sixteen, my beautiful girl!</p>
+  </div>
+
+  <!-- Gallery -->
+  <div class="py-16 px-6 max-w-5xl mx-auto">
+    <h2 class="text-4xl text-center mb-10">MY FAVOURITE VIDS OF YOU!!💞</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <!-- REPLACE THESE WITH YOUR PHOTO LINKS (imgur or postimages direct links) -->
+	  <video width="640" height="360" controls style="border-radius:20px;">
+	  <source src="C:\Users\nk135\Desktop\website\Snapchat-229570456.mp4"type="video/mp4">
+	  </video>
+	  <video width="640" height="360" controls style="border-radius:20px;">
+	  <source src="C:\Users\nk135\Desktop\website\Snapchat-1294441373.mp4"type="video/mp4">
+	  </video>
+	  <video width="640" height="360" controls style="border-radius:20px;">
+	  <source src="C:\Users\nk135\Desktop\website\Snapchat-1333857153.mp4"type="video/mp4">
+	  </video>
+    </div>
+  </div>
+
+  <!-- Love Meter -->
+  <div class="py-16 text-center bg-white/10">
+    <h2 class="text-4xl mb-6">How Much I Love You</h2>
+    <div onclick="fillLoveMeter()" class="mx-auto w-80 h-8 bg-gray-700 rounded-full overflow-hidden cursor-pointer">
+      <div id="loveBar" class="h-full bg-[#4169E1] w-0 transition-all duration-2000"></div>
+    </div>
+    <p id="loveText" class="mt-4 text-xl">0% — Click to fill it up ❤️</p>
+  </div>
+
+  <!-- Why I love you + Make a Wish -->
+  <div class="py-16 max-w-3xl mx-auto px-6">
+    <h2 class="text-4xl text-center mb-10">10 Reasons I Love You</h2>
+    <ul class="space-y-6 text-xl mb-12">
+      <li class="flex gap-4"><span class="text-3xl">1️⃣</span> Your smile lights up my whole day</li>
+      <li class="flex gap-4"><span class="text-3xl">2️⃣</span> The way you laugh at my dumb jokes</li>
+	  <li class="flex gap-4"><span class="text-3xl">3️⃣</span> The way you encourage me in everything I do</li>
+	  <li class="flex gap-4"><span class="text-3xl">4️⃣</span>The way you advice me </li>
+	  <li class="flex gap-4"><span class="text-3xl">5️⃣</span> The way you find time for me even with your busy schedules</li>
+      <li class="flex gap-4"><span class="text-3xl">6️⃣</span>Your inner and outer beauty</li>
+	  <li class="flex gap-4"><span class="text-3xl">7️⃣</span>Your kind heart</li>
+	  <li class="flex gap-4"><span class="text-3xl">8️⃣</span>The way you look at me!!</li>
+	  <li class="flex gap-4"><span class="text-3xl">9️⃣</span>The way you tolerate my jealous heart</li>
+	  <li class="flex gap-4"><span class="text-3xl">0️⃣</span>Lastlyy the way you love mee constantlyy!!</li>
+      <!-- Add your own lines here if you want more -->
+    </ul>
+
+    <h2 class="text-4xl text-center mb-6">Make a Wish, Babe ✨</h2>
+    <textarea id="wish" class="w-full h-32 bg-white/20 rounded-2xl p-6 text-xl placeholder:text-white/70" placeholder="Type your birthday wish here..."></textarea>
+    <button onclick="saveWish()" class="mt-4 bg-[#4169E1] px-8 py-3 rounded-full text-lg">Save My Wish ❤️</button>
+  </div>
+
+  <!-- Love Letter -->
+  <div class="py-16 max-w-2xl mx-auto px-6 text-center">
+    <h2 class="text-4xl mb-8">My Letter to You</h2>
+    <p class="text-2xl leading-relaxed italic">
+      You are the most kind hearted and most beautiful girl I've ever met in my life, 
+      you give me reasons to smile everyday. Even though we argue alot there's no one else 
+      I enjoy talking to but you. I love you bby ❤️😭<br><br>
+      HAPPY SWEET SIXTEEN !!
+    </p>
+    <p class="mt-10 text-3xl">- NK</p>
+  </div>
+
+  <!-- Virtual Cake -->
+  <div class="py-16 text-center">
+    <h2 class="text-4xl mb-8">Blow out your candles 🎂</h2>
+    <div id="cake" onclick="blowCandles()" class="inline-block text-9xl cursor-pointer">🎂</div>
+    <p class="mt-4 text-white/80">Click the cake!</p>
+  </div>
+
+  <!-- Photo Modal -->
+  <div id="photoModal" class="modal flex items-center justify-center" onclick="this.style.display='none'">
+    <img id="modalImage" class="max-h-[90%] max-w-[90%] rounded-3xl">
+  </div>
+
+  <script>
+    // Countdown is replaced with Sweet 16 message (since Feb 26 2026 already passed)
+
+    // Music
+    const music = document.getElementById("bgMusic");
+    function toggleMusic() {
+      if (music.paused) {
+        music.play();
+        document.getElementById("musicStatus").innerText = "🎵 Playing...";
+      } else {
+        music.pause();
+        document.getElementById("musicStatus").innerText = "Paused ❤️";
+      }
+    }
+
+    // Explode heart
+    function explodeHeart(el) {
+      el.style.transform = "scale(3)";
+      setTimeout(() => el.style.transform = "scale(1)", 300);
+      throwConfetti();
+    }
+
+    // Confetti
+    function throwConfetti() {
+      for(let i = 0; i < 200; i++) {
+        const c = document.createElement("div");
+        c.innerHTML = ["❤️","💕","💖","🎉","💗"][Math.floor(Math.random()*5)];
+        c.style.position = "fixed";
+        c.style.left = Math.random()*100 + "vw";
+        c.style.top = "-50px";
+        c.style.fontSize = "30px";
+        document.body.appendChild(c);
+        setTimeout(() => {
+          c.style.transition = "all 3s";
+          c.style.transform = `translateY(${window.innerHeight + 200}px) rotate(${Math.random()*1000}deg)`;
+          c.style.opacity = "0";
+        }, 50);
+        setTimeout(() => c.remove(), 3500);
+      }
+    }
+
+    // Love Meter
+    let loveLevel = 0;
+    function fillLoveMeter() {
+      loveLevel = Math.min(100, loveLevel + 20);
+      document.getElementById("loveBar").style.width = loveLevel + "%";
+      document.getElementById("loveText").innerHTML = loveLevel + "% — I love you this much ❤️";
+      if (loveLevel === 100) throwConfetti();
+    }
+
+    // Save Wish
+    function saveWish() {
+      const wish = document.getElementById("wish").value;
+      if (wish) {
+        localStorage.setItem("comfortSweet16Wish", wish);
+        alert("Wish saved forever on your phone! 🎉 Open the site anytime to see it.");
+      }
+    }
+
+    // Photo modal
+    function showPhoto(img) {
+      document.getElementById("modalImage").src = img.src;
+      document.getElementById("photoModal").style.display = "flex";
+    }
+
+    // Cake
+    function blowCandles() {
+      const cake = document.getElementById("cake");
+      cake.innerHTML = "🎂✨";
+      setTimeout(() => cake.innerHTML = "🎂", 1500);
+      throwConfetti();
+    }
+
+    // Auto start music & confetti
+    setTimeout(() => {
+      music.volume = 0.4;
+      music.play().catch(() => {});
+      throwConfetti();
+    }, 1200);
+  </script>
+</body>
+</html>
